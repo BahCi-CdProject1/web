@@ -13,7 +13,7 @@ pipeline {
         }
         stage("Push file to web instance") {
             steps {
-                sh "scp -r -v -o StrictHostKeyChecking=no -i /var/lib/jenkins/.ssh/test-app1.pem /var/lib/jenkins/workspace/pipeline-test1/web*/* ubuntu@10.64.10.1:/var/www/html"
+                sh "scp -r -v -o StrictHostKeyChecking=no -i /var/lib/jenkins/.ssh/test-app1.pem /var/lib/jenkins/workspace/pipeline-test1/web*/* ubuntu@172.31.57.5:/var/www/html"
             }
         }
     }
